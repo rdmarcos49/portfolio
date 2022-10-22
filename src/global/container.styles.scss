@@ -16,10 +16,12 @@ $base-padding-percentage: 6.67%;
   }
 }
 
-
-
 .bg-gray {
   background-color: #F7F7F7;
+
+  &--blur {
+    background-color: rgba(247, 247, 247, 0.2);
+  }
 }
 
 .bg-white {

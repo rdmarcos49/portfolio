@@ -5,6 +5,7 @@ export interface Props {
 
 const { title } = Astro.props;
 
+import Header from '../components/Header.astro';
 import '../global/container.styles.scss'
 import '../global/reset.styles.scss'
 ---
@@ -19,6 +20,25 @@ import '../global/reset.styles.scss'
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
 	</head>
 	<body>
-		<slot />
+		<Header />
+		<main>
+			<slot />
+		</main>
 	</body>
 </html>
+
+<style lang='scss'>
+	@import '../global/constants.styles.scss';
+
+	main {
+		padding-top: 56px;
+
+		@media screen and (min-width: $screen-md) {
+			padding-top: 60px;
+		}
+
+		@media screen and (min-width: $screen-lg) {
+			padding-top: 52px;
+		}
+	}
+</style>
