@@ -1,0 +1,17 @@
+:root {
+  --default-bg-color: #FAFAFA;
+}
+
+html {
+  font-family: 'Inter';
+}
+
+html, body {
+  background-color: var(--default-bg-color);
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
