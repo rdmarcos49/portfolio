@@ -1,23 +1,22 @@
-:root {
-  --max-width-screen: 1334px;
-  --base-padding-percentage: 6.67%;
-  --xl-padding-percentage: 8.67%;
-}
+@import './constants.styles.scss';
+
+$max-width-screen: 1334px;
+$base-padding-percentage: 6.67%;
 
 .section-content {
   margin: 0 auto;
-  max-width: min(100%, var(--max-width-screen));
-  padding-left: var(--base-padding-percentage);
-  padding-right: var(--base-padding-percentage);
+  max-width: min(100%, $max-width-screen);
+  padding-left: $base-padding-percentage;
+  padding-right: $base-padding-percentage;
   width: 100%;
-}
 
-@media screen and (min-width: 992px) {
-  .section-content {
-    padding-left: var(--xl-padding-percentage);
-    padding-right: var(--xl-padding-percentage);
+  @media screen and (min-width: $screen-xl) {
+    padding-left: 90px;
+    padding-right: 90px;
   }
 }
+
+
 
 .bg-gray {
   background-color: #F7F7F7;
