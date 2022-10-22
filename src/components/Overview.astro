@@ -21,17 +21,25 @@ import SocialMedia from "./SocialMedia.astro";
 </section>
 
 <style lang='scss'>
+  @import '../global/constants.styles.scss';
+
   section {
     align-items: center;
     background-color: #FFF;
     display: flex;
     gap: 16px;
-    height: calc(100vh - 60px);
     flex-direction: column;
-    padding-bottom: 40px;
-    padding-top: 40px;
+    min-height: calc(100vh - 60px);
+    padding-bottom: 20px;
+    padding-top: 20px;
     text-align: center;
+    transition: 0.2s;
     width: 100%;
+
+    @media screen and (min-width: $screen-xs) {
+      padding-bottom: 40px;
+      padding-top: 40px;
+    }
   }
 
   h1 {
@@ -54,10 +62,17 @@ import SocialMedia from "./SocialMedia.astro";
 
   .description {
     font-weight: 300;
+    line-height: 24px;
+
+    @media screen and (min-width: $screen-xs) {
+      margin-top: 3%;
+    }
   }
 
   .regular-cv-text {
     font-size: 14px;
     font-weight: 300;
+    line-height: 20px;
+    margin-top: auto;
   }
 </style>
