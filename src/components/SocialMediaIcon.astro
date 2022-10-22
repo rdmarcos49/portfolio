@@ -2,7 +2,13 @@
 const { src, title, alt, target, link } = Astro.props;
 ---
 <a href={link} target={target}>
-  <img src={src} title={title} src={alt} />
+  <img
+    src={src}
+    title={title}
+    src={alt}
+    height='60'
+    width='60'
+  />
 </a>
 
 <style lang='scss'>
