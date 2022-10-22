@@ -1,0 +1,18 @@
+---
+import SocialMediaIcon from "./SocialMediaIcon.astro";
+---
+
+<nav>
+  <SocialMediaIcon src='/icons/gmail.png' title='Gmail' alt='Gmail icon' link='mailto:roberdm49@gmail.com' />
+  <SocialMediaIcon src='/icons/linkedin.png' title='Linkedin' alt='Linkedin icon' link='https://www.linkedin.com/in/roberto-david-marcos/' target='_blank'/>
+  <SocialMediaIcon src='/icons/github.png' title='Github' alt='Github icon' link='https://github.com/rdmarcos49' target='_blank'/>
+</nav>
+
+<style lang='scss'>
+  nav {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    width: 100%;
+  }
+</style>

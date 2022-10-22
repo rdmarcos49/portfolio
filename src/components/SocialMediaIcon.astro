@@ -1,0 +1,17 @@
+---
+const { src, title, alt, target, link } = Astro.props;
+---
+<a href={link} target={target}>
+  <img src={src} title={title} src={alt} />
+</a>
+
+<style lang='scss'>
+  a {
+    font-size: 0;
+    text-decoration: none;
+  }
+
+  img {
+    width: 60px;
+  }
+</style>

@@ -1,0 +1,63 @@
+---
+import Location from "./Location.astro";
+import SocialMedia from "./SocialMedia.astro";
+---
+
+<section class='section-content'>
+  <h1> Roberto Marcos </h1>
+  <h2> Frontend Software Engineer </h2>
+  <SocialMedia />
+  <Location />
+  <img src='/images/avatar.png' title='Coming soon...' alt='roberto-avatar' tabindex='0'/>
+  <p class='description'>
+    I’m Roberto, and I’m a +3 years frontend software engineer.
+  </p>
+  <p class='description'>
+    Here you would find information about the projects where I worked, my skills, my education and my objectives.
+  </p>
+  <p class='regular-cv-text'>
+    If you want the classic CV version, you can check it using <a href='#'>this link</a>.
+  </p>
+</section>
+
+<style lang='scss'>
+  section {
+    align-items: center;
+    background-color: #FFF;
+    display: flex;
+    gap: 16px;
+    height: calc(100vh - 60px);
+    flex-direction: column;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    text-align: center;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  img {
+    cursor: pointer;
+    margin-bottom: 16px;
+    width: 180px;
+
+    &:focus {
+      outline: auto;
+    }
+  }
+
+  .description {
+    font-weight: 300;
+  }
+
+  .regular-cv-text {
+    font-size: 14px;
+    font-weight: 300;
+  }
+</style>
