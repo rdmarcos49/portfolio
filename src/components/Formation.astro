@@ -1,20 +1,29 @@
 ---
 import FormationAccordion from "./FormationAccordion.astro"
-
+import { workExperience, education } from "../utils/formations";
 ---
 
 <section class='section-content bg-gray'>
   <div class='formation-group'>
     <h3> Work experience </h3>
-    <FormationAccordion title='Software Engineer @ GlobalTask' date='September 2021 - Present' />
-    <FormationAccordion title='Web UI Developer @ Globant' date='March 2020 - September 2021' />
-    <FormationAccordion title='Internship @ Globant' date='November 2019 - January 2020' />
+    {workExperience.map(experience => (
+      <FormationAccordion
+        title={experience.title}
+        date={experience.date}
+        items={experience.items}
+      />
+    ))}
   </div>
 
   <div class='formation-group'>
     <h3> Education </h3>
-    <FormationAccordion title='Systems Engineer @ UNICEN' date='March 2015 - Present' />
-    <FormationAccordion title='Systems Analyst @ UNICEN' date='March 2015 - December 2019' />
+    {education.map(experience => (
+      <FormationAccordion
+        title={experience.title}
+        date={experience.date}
+        items={experience.items}
+      />
+    ))}
   </div>
 </section>
 

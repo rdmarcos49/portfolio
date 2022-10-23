@@ -1,20 +1,20 @@
 ---
-const { title, date } = Astro.props;
+const { title, date, items } = Astro.props;
 ---
 
-<button class='accordion' aria-expanded='false' tabindex='0'>
+<article class='accordion' aria-expanded='false' tabindex='0'>
   <div class='text-wrapper'>
     <p class='text-wrapper__title'> {title} </p>
     <p class='text-wrapper__date'> {date} </p>
   </div>
   <img src='/icons/chevron.png' alt='toggle-control' aria-expanded='false'/>
   <div class='dummy'>
-    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem 
+    {items.map(() => <p>Coming soon...</p>)}
   </div>
-</button>
+</article>
 
 <style lang='scss'>
-  button {
+  article {
     align-items: center;
     background-color: #FFFFFF;
     border: 1px solid #000000;
@@ -25,19 +25,17 @@ const { title, date } = Astro.props;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 16px;
-    transition: 0.3s;
+    transition: 0.25s;
 
     .dummy {
-      height: 0;
-      transform: scaleY(0);
+      display: none;
       padding-top: 16px;
       text-align: left;
       width: 100%;
     }
 
     &[aria-expanded='true'] .dummy {
-      height: 100%;
-      transform: scaleY(1);
+      display: flex;
     }
   }
 
@@ -59,10 +57,11 @@ const { title, date } = Astro.props;
 
   img {
     transition: 0.25s ease-in-out;
+    transform: scaleY(1);
     width: 36px;
 
     &[aria-expanded='false'] {
-      transform: rotate(-180deg);
+      transform: scaleY(-1);
     }
   }
 </style>
