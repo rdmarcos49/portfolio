@@ -8,9 +8,9 @@ const ComputerIcon = 'icons/computer-check.png';
 
 <article class='accordion' aria-expanded='false' tabindex='0'>
   <div class='accordion__overview'>
-    <div class='text-wrapper'>
-      <p class='text-wrapper__title'> {title} </p>
-      <p class='text-wrapper__date'> {date} </p>
+    <div class='accordion__overview__text-wrapper'>
+      <p class='accordion__overview__text-wrapper__title'> {title} </p>
+      <p class='accordion__overview__text-wrapper__date'> {date} </p>
     </div>
     <img src={ChevronIcon} alt='toggle-control' aria-expanded='false'/>
   </div>
@@ -50,6 +50,13 @@ const ComputerIcon = 'icons/computer-check.png';
       padding-bottom: 16px;
     }
 
+    
+    &[aria-expanded='true'] &__items-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
     &__overview {
       align-items: center;
       display: flex;
@@ -67,7 +74,7 @@ const ComputerIcon = 'icons/computer-check.png';
         }
       }
 
-      .text-wrapper {
+      &__text-wrapper {
         align-items: flex-start;
         display: flex;
         flex-direction: column;
@@ -125,12 +132,6 @@ const ComputerIcon = 'icons/computer-check.png';
           }
         }
       }
-    }
-
-    &[aria-expanded='true'] &__items-wrapper {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
     }
   }
 </style>
