@@ -1,6 +1,8 @@
 <article>
-  <img src='/icons/location.png' alt='Current location' height='30' width='30'/>
-  <h3> Buenos Aires, Argentina </h3>
+  <h3>
+    <img src='/icons/location.png' alt='Current location' height='30' width='30'/>
+    Buenos Aires, Argentina
+  </h3>
 </article>
 
 <style lang='scss'>
@@ -14,9 +16,14 @@
   h3 {
     font-size: 18px;
     font-weight: 400;
-  }
+    position: relative;
 
-  img {
-    width: 30px;
+    img {
+      left: 0;
+      position: absolute;
+      top: 47%;
+      transform: translate(-120%, -50%);
+      width: 30px;
+    }
   }
 </style>

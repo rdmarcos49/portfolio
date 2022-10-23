@@ -29,7 +29,7 @@ import SocialMedia from "./SocialMedia.astro";
     display: flex;
     gap: 16px;
     flex-direction: column;
-    min-height: calc(100vh - 60px);
+    min-height: min(880px, calc(100vh - 60px));
     padding-bottom: 20px;
     padding-top: 20px;
     text-align: center;
@@ -39,6 +39,10 @@ import SocialMedia from "./SocialMedia.astro";
     @media screen and (min-width: $screen-xs) {
       padding-bottom: 40px;
       padding-top: 40px;
+    }
+
+    @media screen and (min-width: $screen-lg) {
+      min-height: calc(100vh - 60px);
     }
   }
 
