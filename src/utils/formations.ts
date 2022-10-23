@@ -71,8 +71,7 @@ export const education: Formation[] = [
     date: 'March 2015 - Present',
     items: [
       {
-        date: '',
-        description: '',
+        description: 'Final Project in progress',
       },
     ]
   },
@@ -81,8 +80,7 @@ export const education: Formation[] = [
     date: 'March 2015 - December 2019',
     items: [
       {
-        date: '',
-        description: '',
+        description: 'Intermediate degree from Systems Engineer career. Finished',
       },
     ]
   },
