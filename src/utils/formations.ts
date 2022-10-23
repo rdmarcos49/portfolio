@@ -1,5 +1,5 @@
-interface Description {
-  date: string;
+export interface Description {
+  date?: string;
   description: string;
 }
 
@@ -15,13 +15,20 @@ export const workExperience: Formation[] = [
     date: 'September 2021 - Present',
     items: [
       {
-        date: '',
-        description: '',
+        date: 'June 2022 - Present',
+        description: `I'm participating, as a core member of the team, in the redesign of a web
+          page for a finance-related application. This app has different sections.
+          It's main characteristic is a complete flow that consists of validating the
+          user's identity to allow them to acquire the services offered by the
+          company. We also developed a fully customizable blog, user profile, and
+          many landing pages.`,
       },
       {
-        date: '',
-        description: '',
-      },
+        date: 'September 2021 - June 2022',
+        description: `We builted an entire onboarding app from a scratch, with a backoffice
+          application to manage the users registered. I also participated in the
+          development of a landing page, where the users can buy BTC. `,
+        },
     ]
   },
   {
@@ -29,13 +36,21 @@ export const workExperience: Formation[] = [
     date: 'March 2020 - September 2021',
     items: [
       {
-        date: '',
-        description: '',
+        date: 'February 2021 - September 2021',
+        description: `I joined the development and maintenance of a digital educative
+          platform. My task were develop features, testing, code improvement and
+          maintenance.`,
       },
       {
-        date: '',
-        description: '',
+        date: 'August 2020 - February 2021',
+        description: `E-Commerce development, maintenance and migration from plain
+          Javascript application to a React application.`,
       },
+      {
+        date: 'February 2020 - August 2020',
+        description: `Development, maintenance, code quality improvement and SEO for a
+          landing page, related with an internal social media.`
+      }
     ]
   },
   {
@@ -43,12 +58,8 @@ export const workExperience: Formation[] = [
     date: 'November 2019 - January 2020',
     items: [
       {
-        date: '',
-        description: '',
-      },
-      {
-        date: '',
-        description: '',
+        description: `Development professional practices for the university through a Front End bootcamp. This were my first steps in the professional environment.
+          The final project was a page design and development using the Spotify API`,
       },
     ]
   },

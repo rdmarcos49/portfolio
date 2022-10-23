@@ -1,5 +1,6 @@
 ---
 const { title, date, items } = Astro.props;
+import type { Description } from "../utils/formations";
 ---
 
 <article class='accordion' aria-expanded='false' tabindex='0'>
@@ -8,13 +9,18 @@ const { title, date, items } = Astro.props;
     <p class='text-wrapper__date'> {date} </p>
   </div>
   <img src='/icons/chevron.png' alt='toggle-control' aria-expanded='false'/>
-  <div class='dummy'>
-    {items.map(() => <p>Coming soon...</p>)}
+  <div class='accordion__items-wrapper'>
+    {items.map((item: Description) => (
+      <div class='accordion__items-wrapper__item'>
+        {item.date && <p class='accordion__items-wrapper__item__date'>{item.date}</p>}
+        <p class='accordion__items-wrapper__item__description'>{item.description}</p>
+      </div>
+    ))}
   </div>
 </article>
 
 <style lang='scss'>
-  article {
+  .accordion {
     align-items: center;
     background-color: #FFFFFF;
     border: 1px solid #000000;
@@ -27,15 +33,39 @@ const { title, date, items } = Astro.props;
     padding: 16px;
     transition: 0.25s;
 
-    .dummy {
+    &__items-wrapper {
       display: none;
       padding-top: 16px;
       text-align: left;
       width: 100%;
+
+      &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid rgba(221, 221, 221, 0.7);
+          padding-bottom: 16px;
+        }
+
+        &__date {
+          font-style: italic;
+          font-size: 13px;
+          font-weight: 300;
+        }
+
+        &__description {
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
     }
 
-    &[aria-expanded='true'] .dummy {
+    &[aria-expanded='true'] &__items-wrapper {
       display: flex;
+      flex-direction: column;
+      gap: 16px;
     }
   }
 
@@ -51,7 +81,7 @@ const { title, date, items } = Astro.props;
     }
 
     &__date {
-      font-weight: 300px;
+      font-weight: 300;
     }
   }
 
