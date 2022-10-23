@@ -1,0 +1,54 @@
+---
+import FormationAccordion from "./FormationAccordion.astro"
+
+---
+
+<section class='section-content bg-gray'>
+  <div class='formation-group'>
+    <h3> Work experience </h3>
+    <FormationAccordion title='Software Engineer @ GlobalTask' date='September 2021 - Present' />
+    <FormationAccordion title='Web UI Developer @ Globant' date='March 2020 - September 2021' />
+    <FormationAccordion title='Internship @ Globant' date='November 2019 - January 2020' />
+  </div>
+
+  <div class='formation-group'>
+    <h3> Education </h3>
+    <FormationAccordion title='Systems Engineer @ UNICEN' date='March 2015 - Present' />
+    <FormationAccordion title='Systems Analyst @ UNICEN' date='March 2015 - December 2019' />
+  </div>
+</section>
+
+<script>
+  const accordions = [...document.querySelectorAll('.accordion')];
+  for (const accordion of accordions) {
+    const chevron = accordion.querySelector('img');
+    accordion?.addEventListener('click', () => {
+      const currentAriaExpandedValue = accordion.getAttribute('aria-expanded')
+      const newAriaExpandedValue = currentAriaExpandedValue === 'false' ? 'true' : 'false';
+
+      accordion.setAttribute('aria-expanded', newAriaExpandedValue);
+      chevron?.setAttribute('aria-expanded', newAriaExpandedValue);
+    })
+  }
+</script>
+
+<style lang='scss'>
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  .formation-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    h3 {
+      font-size: 26px;
+      text-align: center;
+    }
+  }
+</style>
