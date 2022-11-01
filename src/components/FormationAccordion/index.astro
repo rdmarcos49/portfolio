@@ -1,0 +1,34 @@
+---
+const { title, date, items } = Astro.props;
+import './index.scss';
+import type { Description } from "../../utils/formations";
+const ChevronIcon = '/icons/chevron.png';
+const CalendarIcon = '/icons/calendar.png';
+const ComputerIcon = 'icons/computer-check.png';
+---
+
+<article class='accordion' aria-expanded='false' tabindex='0'>
+  <div class='accordion__overview'>
+    <div class='accordion__overview__text-wrapper'>
+      <p class='accordion__overview__text-wrapper__title'> {title} </p>
+      <p class='accordion__overview__text-wrapper__date'> {date} </p>
+    </div>
+    <img class='accordion__overview__chevron' src={ChevronIcon} alt='toggle-control' aria-expanded='false'/>
+  </div>
+  <div class='accordion__items-wrapper'>
+    {items.map((item: Description) => (
+      <div class='accordion__items-wrapper__item'>
+        {item.date && (
+          <div class='accordion__items-wrapper__item__container'>
+            <img class='accordion__items-wrapper__item__container__icon' src={CalendarIcon} alt='calendar-icon' />
+            <p class='accordion__items-wrapper__item__container__date'>{item.date}</p>  
+          </div>
+        )}
+        <div class='accordion__items-wrapper__item__container'>
+          <img class='accordion__items-wrapper__item__container__icon' src={ComputerIcon} alt='computer-icon' />
+          <p class='accordion__items-wrapper__item__container__description'>{item.description}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</article>

@@ -1,8 +1,10 @@
 ---
+import './index.scss';
 const { src, title, alt, target, link } = Astro.props;
 ---
-<a href={link} target={target}>
+<a class='social-media-icon-wrapper' href={link} target={target}>
   <img
+    class='social-media-icon-wrapper__image'
     src={src}
     title={title}
     src={alt}
@@ -10,14 +12,3 @@ const { src, title, alt, target, link } = Astro.props;
     width='60'
   />
 </a>
-
-<style lang='scss'>
-  a {
-    font-size: 0;
-    text-decoration: none;
-  }
-
-  img {
-    width: 60px;
-  }
-</style>

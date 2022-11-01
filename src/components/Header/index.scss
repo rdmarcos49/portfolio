@@ -1,0 +1,76 @@
+@import '../../global/constants.styles.scss';
+
+.header {
+  align-items: center;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  color: $secondary-color;
+  height: 60px;
+  display: flex;
+  left: 50%;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 100%;
+
+  @media screen and (min-width: $screen-lg) {
+    justify-content: space-between;
+    padding-bottom: 16px;
+    padding-top: 16px;
+  }
+
+  &__wrapper {
+    align-items: center;
+    display: flex;
+  
+    @media screen and (min-width: $screen-lg) {
+      justify-content: space-between;
+    }
+
+    &__hamburger {
+      cursor: pointer;
+      width: 40px;
+      z-index: 2;
+    
+      @media screen and (min-width: $screen-md) {
+        width: 44px;
+      }
+    
+      @media screen and (min-width: $screen-lg) {
+        display: none;
+      }
+    }
+    
+    &__name {
+      flex-grow: 1;
+      font-weight: 600;
+      text-align: center;
+      transform: translateX(-20px);
+    
+      @media screen and (min-width: $screen-lg) {
+        flex-grow: unset;
+        transform: unset;
+      }
+    }
+    
+    &__navigation {
+      display: none;
+    
+      @media screen and (min-width: $screen-lg) {
+        display: flex;
+        gap: 16px;
+      }
+
+      &__link {
+        color: $secondary-color;
+        text-decoration-color: transparent;
+        text-underline-offset: 5px;
+        transition: 0.2s;
+      
+        &:hover {
+          text-decoration-color: inherit;
+        }
+      }
+    }
+  }
+}

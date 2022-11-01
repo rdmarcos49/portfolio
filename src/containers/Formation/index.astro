@@ -1,11 +1,12 @@
 ---
-import FormationAccordion from '../components/FormationAccordion.astro'
-import { workExperience, education } from '../utils/formations';
+import './index.scss';
+import FormationAccordion from '../../components/FormationAccordion/index.astro'
+import { workExperience, education } from '../../utils/formations';
 ---
 
-<section class='section-content bg-gray'>
-  <div class='formation-group'>
-    <h3> Work experience </h3>
+<section class='formation section-content bg-gray'>
+  <div class='formation__group'>
+    <h3 class='formation__group__title'> Work experience </h3>
     {workExperience.map(experience => (
       <FormationAccordion
         title={experience.title}
@@ -15,8 +16,8 @@ import { workExperience, education } from '../utils/formations';
     ))}
   </div>
 
-  <div class='formation-group'>
-    <h3> Education </h3>
+  <div class='formation__group'>
+    <h3 class='formation__group__title'> Education </h3>
     {education.map(experience => (
       <FormationAccordion
         title={experience.title}
@@ -40,24 +41,3 @@ import { workExperience, education } from '../utils/formations';
     })
   }
 </script>
-
-<style lang='scss'>
-  section {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    padding-bottom: 20px;
-    padding-top: 20px;
-  }
-
-  .formation-group {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-
-    h3 {
-      font-size: 26px;
-      text-align: center;
-    }
-  }
-</style>
