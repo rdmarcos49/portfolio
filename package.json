@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
+    "prebuild": "rimraf dist",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
@@ -14,6 +15,8 @@
     "astro": "1.5.2"
   },
   "devDependencies": {
+    "astro-compress": "1.1.12",
+    "rimraf": "^3.0.2",
     "sass": "^1.55.0",
     "standard": "17.0.0"
   }
