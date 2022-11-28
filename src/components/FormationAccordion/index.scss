@@ -24,14 +24,14 @@
   &:focus::after {
     box-shadow: 0 0 0 2px rgba(0, 0, 0, 1);
   }
-
-  &[aria-expanded='true'] &__overview {
-    padding-bottom: 16px;
-  }
   
   &[aria-expanded='true'] &__items-wrapper {
     max-height: 100vh;
     opacity: 1;
+  }
+
+  &[aria-expanded='true'] &__items-wrapper__divisor {
+    padding: 16px 0;
   }
 
   &__overview {
@@ -39,7 +39,6 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding-bottom: 16px;
 
     &__chevron {
       height: 36px;
@@ -71,26 +70,36 @@
   }
 
   &__items-wrapper {
-    border-top: 1px solid rgba(221, 221, 221, 0.7);
     max-height: 0;
     opacity: 0;
-    padding-top: 16px;
     text-align: left;
     transition:
-      max-height 500ms ease-in-out,
-      opacity 300ms ease-in-out 100ms
+      max-height 400ms ease,
+      opacity 300ms ease 100ms
     ;
     width: 100%;
+
+    &__divisor {
+      align-items: center;
+      background-color: transparent;
+      display: flex;
+      height: 1px;
+      padding: 0;
+      transition: all 400ms ease;
+      width: 100%;
+
+      &::after {
+        background-color: rgba(221, 221, 221, 0.7);
+        content: "";
+        height: 1px;
+        width: 100%;
+      }
+    }
 
     &__item {
       display: flex;
       flex-direction: column;
       gap: 8px;
-
-      &:not(:last-child) {
-          border-bottom: 1px solid rgba(221, 221, 221, 0.7);
-          padding-bottom: 16px;
-        }
 
       &__container {
         align-items: flex-start;
