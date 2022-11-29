@@ -20,7 +20,8 @@ $base-padding-percentage: 6.67%;
   background-color: #F7F7F7;
 
   &--blur {
-    background-color: rgba(247, 247, 247, 0.2);
+    background-color: rgba(247, 247, 247, 0.5);
+    backdrop-filter: blur(4px);
   }
 }
 
