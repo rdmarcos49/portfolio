@@ -34,7 +34,8 @@
     cursor: pointer;
     height: auto;
     margin-bottom: 16px;
-    width: 180px;
+    max-width: 180px;
+    width: 100%;
 
     &:focus {
       outline: auto;

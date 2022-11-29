@@ -45,11 +45,14 @@
       flex-grow: 1;
       font-weight: 600;
       text-align: center;
-      transform: translateX(-20px);
     
       @media screen and (min-width: $screen-lg) {
         flex-grow: unset;
         transform: unset;
+      }
+
+      @media screen and (min-width: 300px) {
+        transform: translateX(-20px);
       }
     }
     
