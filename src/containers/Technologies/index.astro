@@ -1,0 +1,24 @@
+---
+import './index.scss';
+import { listOfTechnologies } from '../../utils/technologies';
+---
+
+<section class='technologies section-content bg-white'>
+  <h3 class='technologies__title'> Technologies </h3>
+  {listOfTechnologies.map(technology => (
+    <article class='technologies__group'>
+      <h4 class='technologies__group__title'>
+        <span class='technologies__group__title--light'> {technology.titleLight} </span>
+        <span class='technologies__group__title--bold'>{technology.titleBold}</span>
+      </h4>
+      <div class='technologies__group__rows-wrapper'>
+        {technology.items.map(item => (
+          <div class='technologies__group__rows-wrapper__row'>
+            <img class='technologies__group__rows-wrapper__row__thumbnail' alt='technology-icon' src={item.thumbnail} />
+            <p class='technologies__group__rows-wrapper__row__description'> {item.description} </p>
+          </div>
+        ))}
+      </div>
+    </article>
+  ))}
+</section>
