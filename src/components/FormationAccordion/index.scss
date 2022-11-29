@@ -26,7 +26,7 @@
   }
   
   &[aria-expanded='true'] &__items-wrapper {
-    max-height: 100vh;
+    max-height: 500vh;
     opacity: 1;
   }
 
@@ -109,8 +109,13 @@
       &__container {
         align-items: flex-start;
         display: flex;
+        flex-wrap: wrap;
         gap: 8px;
         line-height: 21px;
+
+        @media screen and (min-width: 250px) {
+          flex-wrap: unset;
+        }
 
         &__icon {
           height: 24px;
@@ -125,6 +130,7 @@
         }
 
         &__description {
+          align-self: center;
           font-size: 14px;
           font-weight: 400;
         }
