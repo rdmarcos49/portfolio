@@ -33,7 +33,7 @@ export const workExperience: Formation[] = [
   },
   {
     title: 'Web UI Developer @ Globant',
-    date: 'March 2020 - September 2021',
+    date: 'February 2020 - September 2021',
     items: [
       {
         date: 'February 2021 - September 2021',
