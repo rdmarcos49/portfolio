@@ -9,6 +9,11 @@
   padding: 16px;
   position: relative;
   transition: padding 0.25s;
+  
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
 
   &::after {
     border-radius: 8px;
@@ -23,6 +28,10 @@
 
   &:focus::after {
     box-shadow: 0 0 0 2px rgba(0, 0, 0, 1);
+  }
+
+  &[aria-expanded='false'] &__items-wrapper__item {
+    pointer-events: none;
   }
   
   &[aria-expanded='true'] &__items-wrapper {
