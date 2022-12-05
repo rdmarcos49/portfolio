@@ -1,0 +1,21 @@
+.thanks {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  text-align: center;
+
+  &__text {
+    font-size: 14px;
+
+    &--email {
+      font-weight: bold;
+      word-break: break-all;
+
+      @media screen and (min-width: 300px) {
+        word-break: unset;
+      }
+    }
+  }
+}
