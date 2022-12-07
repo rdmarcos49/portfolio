@@ -11,7 +11,8 @@ const ComputerIcon = 'icons/computer-check.png';
   <div class='accordion__overview'>
     <div class='accordion__overview__text-wrapper'>
       <p class='accordion__overview__text-wrapper__title'> {title} </p>
-      <p class='accordion__overview__text-wrapper__date'> {date} </p>
+      <span class='accordion__overview__text-wrapper__date-separator'> | </span>
+      <p class='accordion__overview__text-wrapper__date general-description'> {date} </p>
     </div>
     <img class='accordion__overview__chevron' src={ChevronIcon} alt='toggle-control' aria-expanded='false'/>
   </div>

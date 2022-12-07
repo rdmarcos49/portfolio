@@ -1,5 +1,17 @@
 @import './constants.styles.scss';
 
+.general-title {
+  font-size: 26px;
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: 28px;
+  }
+
+  @media screen and (min-width: $screen-lg) {
+    font-size: 30px;
+  }
+}
+
 .general-description {
   font-size: 14px;
 
