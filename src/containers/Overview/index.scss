@@ -43,17 +43,23 @@
   }
 
   &__description {
+    font-size: 16px;
     font-weight: 300;
     line-height: 24px;
 
     @media screen and (min-width: $screen-xs) {
+      font-size: 18px;
       margin-top: 3%;
+    }
+
+    @media screen and (min-width: $screen-lg) {
+      font-size: 20px;
     }
   }
 
   &__regular-cv-text {
     font-weight: 300;
     line-height: 20px;
-    margin-top: auto;
+    margin-top: 16px;
   }
 }
