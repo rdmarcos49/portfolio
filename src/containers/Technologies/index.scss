@@ -3,7 +3,7 @@
 .technologies {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  // gap: 16px;
 
   &__title {
     font-weight: 500;
@@ -16,8 +16,20 @@
     flex-direction: column;
     padding-top: 16px;
 
+    @media screen and (min-width: $screen-lg) {
+      padding-top: 32px;
+    }
+
     &:not(:nth-child(2)) {
       border-top: solid 1px rgba(221, 221, 221, 0.7);
+    }
+
+    &:not(:last-child) {
+      padding-bottom: 16px;
+
+      @media screen and (min-width: $screen-lg) {
+        padding-bottom: 32px;
+      }
     }
 
     &__title {
