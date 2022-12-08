@@ -25,7 +25,7 @@ export const workExperience: Formation[] = [
       },
       {
         date: 'September 2021 - June 2022',
-        description: `We builted an entire onboarding app from a scratch, with a backoffice
+        description: `We built an entire onboarding app from a scratch, with a backoffice
           application to manage the users registered. I also participated in the
           development of a landing page, where the users can buy BTC. `,
         },
@@ -59,7 +59,7 @@ export const workExperience: Formation[] = [
     items: [
       {
         description: `Development professional practices for the university through a Front End bootcamp. This were my first steps in the professional environment.
-          The final project was a page design and development using the Spotify API`,
+          The final project was a SPA (single page application) using the Spotify API`,
       },
     ]
   },
