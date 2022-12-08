@@ -23,8 +23,7 @@ $base-padding-percentage: 6.67%;
   width: 100%;
 
   & > * {
-    padding-left: $base-padding-percentage;
-    padding-right: $base-padding-percentage;
+    padding: 32px $base-padding-percentage;
 
     @media screen and (min-width: $screen-xl) {
       padding-left: 90px;
