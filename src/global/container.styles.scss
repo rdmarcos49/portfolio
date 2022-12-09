@@ -3,6 +3,21 @@
 $max-width-screen: 1200px;
 $base-padding-percentage: 6.67%;
 
+html {
+  scroll-behavior: smooth;
+}
+
+#welcome,
+#experience,
+#education,
+#technologies,
+#objectives {
+}
+
+.scrollable-section {
+  scroll-margin-top: 92px;
+}
+
 .section-content {
   margin: 0 auto;
   max-width: min(100%, $max-width-screen);

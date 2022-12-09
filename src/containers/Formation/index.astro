@@ -6,7 +6,7 @@ import { workExperience, education } from '../../utils/formations';
 
 <section class='formation bg-gray'>
   <div class='formation__group'>
-    <h3 class='formation__group__title general-title'> Work experience </h3>
+    <h3 id="experience" class='formation__group__title general-title scrollable-section'> Work experience </h3>
     {workExperience.map(experience => (
       <FormationAccordion
         title={experience.title}
@@ -17,7 +17,7 @@ import { workExperience, education } from '../../utils/formations';
   </div>
 
   <div class='formation__group'>
-    <h3 class='formation__group__title general-title'> Education </h3>
+    <h3 id="education" class='formation__group__title general-title scrollable-section'> Education </h3>
     {education.map(experience => (
       <FormationAccordion
         title={experience.title}
