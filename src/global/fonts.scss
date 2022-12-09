@@ -6,10 +6,6 @@
   @media screen and (min-width: $screen-xs) {
     font-size: 1.75rem;
   }
-
-  @media screen and (min-width: $screen-lg) {
-    font-size: 1.875rem;
-  }
 }
 
 .general-description {
@@ -17,9 +13,5 @@
 
   @media screen and (min-width: $screen-xs) {
     font-size: 1rem;
-  }
-
-  @media screen and (min-width: $screen-lg) {
-    font-size: 1.125rem;
   }
 }
