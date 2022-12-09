@@ -21,11 +21,11 @@
   }
 
   &__title {
-    font-size: 30px;
+    font-size: 1.875rem;
   }
 
   &__subtitle {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 
   &__avatar {
@@ -41,17 +41,17 @@
   }
 
   &__description {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 300;
     line-height: 24px;
 
     @media screen and (min-width: $screen-xs) {
-      font-size: 18px;
+      font-size: 1.125rem;
       margin-top: 3%;
     }
 
     @media screen and (min-width: $screen-lg) {
-      font-size: 20px;
+      font-size: 1.25rem;
     }
   }
 
