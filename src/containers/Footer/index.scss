@@ -1,3 +1,5 @@
+@import '../../global/constants.styles.scss';
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -11,7 +13,7 @@
       font-weight: bold;
       word-break: break-all;
 
-      @media screen and (min-width: 300px) {
+      @media screen and (min-width: $screen-xxs) {
         color: #1D1D1D;
         text-decoration: none;
         text-underline-offset: 2px;
