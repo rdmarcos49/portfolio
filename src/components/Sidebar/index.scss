@@ -20,7 +20,7 @@
   position: absolute;
   width: 100%;
 
-  @media screen and (min-width: 300px) {
+  @media screen and (min-width: $screen-xxs) {
     top: 56px;
     width: 200px;
   }
