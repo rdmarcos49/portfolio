@@ -65,6 +65,26 @@
         flex-grow: unset;
         transform: unset;
       }
+
+      &--link {
+        display: none;
+
+        @media screen and (min-width: $screen-lg) {
+          display: block;
+        }
+      }
+
+      &--plain-text {
+        display: block;
+
+        &:hover {
+          text-decoration: none;
+        }
+
+        @media screen and (min-width: $screen-lg) {
+          display: none;
+        }
+      }
     }
     
     &__navigation {
