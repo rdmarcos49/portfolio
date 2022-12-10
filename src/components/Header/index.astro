@@ -17,3 +17,10 @@ import './index.scss';
     </nav>
   </div>
 </header>
+
+<script>
+  const dialog = document.querySelector('.sidebar-wrapper');
+  const hamburgerIcon = document.querySelector('.header__wrapper__hamburger');
+
+  hamburgerIcon?.addEventListener('click', () => dialog?.show())
+</script>

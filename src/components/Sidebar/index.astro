@@ -2,7 +2,7 @@
 import './index.scss';
 ---
 
-<div class='sidebar-wrapper'>
+<dialog class='sidebar-wrapper'>
   <nav class='sidebar'>
     <a class='sidebar__option' href='#welcome'>Roberto Marcos</a>
     <a class='sidebar__option' href='#experience'>Experience</a>
@@ -11,4 +11,14 @@ import './index.scss';
     <a class='sidebar__option' href='#objectives'>Objectives</a>
     <a class='sidebar__option sidebar__option--external' href='https://github.com/rdmarcos49/portfolio' target='_blank'>This project</a>
   </nav>
-</div>
+</dialog>
+
+<script>
+  const dialog = document.querySelector('.sidebar-wrapper');
+  const DIALOG_NODENAME = 'DIALOG'
+  dialog?.addEventListener('click', (event) => {
+    if (event?.target?.nodeName === DIALOG_NODENAME) {
+      dialog.close()
+    }
+  })
+</script>

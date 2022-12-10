@@ -2,14 +2,13 @@
 
 .sidebar-wrapper {
   background-color: rgba(0, 0, 0, .2);
+  border: none;
   height: 100vh;
   left: 0;
   position: fixed;
   top: 0;
   width: 100vw;
   z-index: 200;
-  display: block;
-
 }
 
 .sidebar {
@@ -18,6 +17,7 @@
   flex-direction: column;
   left: 0;
   position: absolute;
+  top: 0;
   width: 100%;
 
   @media screen and (min-width: $screen-xxs) {
@@ -47,7 +47,7 @@
         background-image: url('icons/external.svg');
         background-repeat: no-repeat;
         background-size: 16px 16px;
-        display:block;
+        display: block;
         height: 16px;
         margin-left: 8px;
         width: 16px;
