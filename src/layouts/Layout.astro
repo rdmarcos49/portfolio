@@ -6,6 +6,7 @@ export interface Props {
 const { title } = Astro.props;
 
 import Header from '../components/Header/index.astro';
+import Sidebar from '../components/Sidebar/index.astro';
 import '../global/container.styles.scss'
 import '../global/reset.styles.scss'
 ---
@@ -29,6 +30,7 @@ import '../global/reset.styles.scss'
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700">
 	</head>
 	<body>
+		<Sidebar />
 		<Header />
 		<main class='section-content__main'>
 			<slot />

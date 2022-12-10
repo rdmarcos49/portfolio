@@ -37,7 +37,8 @@ html {
   max-width: min(100%, $max-width-screen);
   width: 100%;
 
-  & > * {
+  & > section,
+  & > footer {
     padding: 32px $base-padding-percentage;
 
     @media screen and (min-width: $screen-xl) {
