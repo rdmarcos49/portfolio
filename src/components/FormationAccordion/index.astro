@@ -7,16 +7,16 @@ const CalendarIcon = '/icons/calendar.png';
 const ComputerIcon = 'icons/computer-check.png';
 ---
 
-<button class='accordion' aria-expanded='false' tabindex='0'>
+<button class='accordion' data-expanded='false' tabindex='0'>
   <div class='accordion__overview'>
     <div class='accordion__overview__text-wrapper'>
       <p class='accordion__overview__text-wrapper__title'> {title} </p>
       <span class='accordion__overview__text-wrapper__date-separator'> | </span>
       <p class='accordion__overview__text-wrapper__date general-description'> {date} </p>
     </div>
-    <img class='accordion__overview__chevron' src={ChevronIcon} alt='toggle-control' aria-expanded='false' height={36} width={36} />
+    <img class='accordion__overview__chevron' src={ChevronIcon} alt='toggle-control' data-expanded='false' height={36} width={36} />
   </div>
-  <div class='accordion__items-wrapper' aria-expanded='false'>
+  <div class='accordion__items-wrapper' data-expanded='false'>
     {items.map((item: Description) => (
       <div class="accordion__items-wrapper__divisor"></div>
       <div class='accordion__items-wrapper__item'>

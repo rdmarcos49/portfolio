@@ -44,13 +44,13 @@ import { workExperience, education } from '../../utils/formations';
       });
     });
     
-    element.setAttribute('aria-expanded', 'false');
+    element.setAttribute('data-expanded', 'false');
   }
 
   function expandSection(element) {
     const sectionHeight = element.scrollHeight;
     element.style.height = sectionHeight + 'px';
-    element.setAttribute('aria-expanded', 'true');
+    element.setAttribute('data-expanded', 'true');
   }
 
   const accordionList = [...document.querySelectorAll('.accordion')];
@@ -59,16 +59,16 @@ import { workExperience, education } from '../../utils/formations';
     accordion.addEventListener('click', () => {
       const section = accordion.querySelector('.accordion__items-wrapper');
       const chevron = accordion.querySelector('.accordion__overview__chevron')
-      const isExpanded = accordion.getAttribute('aria-expanded') === 'true';
+      const isExpanded = accordion.getAttribute('data-expanded') === 'true';
         
       if (isExpanded) {
         collapseSection(section)
-        accordion.setAttribute('aria-expanded', 'false')
-        chevron.setAttribute('aria-expanded', 'false')
+        accordion.setAttribute('data-expanded', 'false')
+        chevron.setAttribute('data-expanded', 'false')
       } else {
         expandSection(section)
-        accordion.setAttribute('aria-expanded', 'true')
-        chevron.setAttribute('aria-expanded', 'true')
+        accordion.setAttribute('data-expanded', 'true')
+        chevron.setAttribute('data-expanded', 'true')
       }
     });
   }
