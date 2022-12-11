@@ -12,11 +12,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "1.5.2"
+    "astro": "1.5.2",
+    "astro-seo": "^0.6.0"
   },
   "devDependencies": {
     "astro-compress": "1.1.12",
-    "astro-robots-txt": "^0.3.10",
     "rimraf": "^3.0.2",
     "sass": "^1.55.0",
     "standard": "17.0.0"

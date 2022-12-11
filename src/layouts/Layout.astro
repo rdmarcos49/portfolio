@@ -5,27 +5,40 @@ export interface Props {
 
 const { title } = Astro.props;
 
+import { SEO } from "astro-seo";
 import Header from '../components/Header/index.astro';
 import Sidebar from '../components/Sidebar/index.astro';
 import '../global/container.styles.scss'
 import '../global/reset.styles.scss'
+
+const description = 'Personal portfolio created with Astro.build'
+const openGraphConfig = {
+	basic: {
+		title: 'Portfolio - Roberto Marcos - Frontend Software Engineer',
+		type: 'website',
+		image: '/images/avatar.png',
+		url: 'https://portfolio-rdmarcos49.vercel.app/',
+	},
+	optional: {
+		description: 'Here you would find information about the projects where I worked, my skills, my education and my objectives.',
+	},
+	image: {
+		height: 150,
+		width: 100,
+	}
+}
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<SEO
+			title={title}
+			description={description}
+			openGraph={openGraphConfig}
+		/>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<meta name="description" content="Personal portfolio created with Astro.build">
-		<meta property="og:title" content="Portfolio - Roberto Marcos - Frontend Software Engineer" />
-		<meta property="og:description" content="Here you would find information about the projects where I worked, my skills, my education and my objectives." />
-		<meta property="og:url" content="https://portfolio-rdmarcos49.vercel.app/" />
-		<meta property="og:image" content="/images/avatar.png" />
-		<meta property="og:image:width" content="100" />
-		<meta property="og:image:height" content="150" />
-		<meta property="og:type" content="website" />
-		<meta property="og:locale" content="en_US" />
-		<title>{title}</title>
 		<link rel="icon" type="image/svg+xml" href="/javascript-favicon.svg" />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700">
 	</head>
