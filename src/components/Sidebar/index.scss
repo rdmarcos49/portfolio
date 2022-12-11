@@ -20,10 +20,17 @@
   top: 0;
   width: 100%;
 
+  animation: appear-top 250ms ease-in-out forwards;
+
   @media screen and (min-width: $screen-xs) {
     max-width: 250px;
     top: 56px;
     width: 100%;
+  }
+
+  @media screen and (min-width: $screen-xs) {
+    animation: appear-top 0;
+    animation: appear-left 250ms ease-in-out forwards;
   }
 
   &__option {
@@ -55,5 +62,24 @@
         width: 16px;
       }
     }
+  }
+}
+
+
+@keyframes appear-left {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes appear-top {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
