@@ -18,3 +18,34 @@ import '../global/fonts.scss';
 	<Thanks />
 	<Footer />
 </Layout>
+
+<script>
+	const MAX_MOBILE_RES = 991;
+	window.addEventListener('load', () => {
+		const dialog = document.querySelector('.sidebar-wrapper');
+		window.addEventListener('resize', () => {
+			let timeout;
+
+			if (!timeout) {
+				timeout = setTimeout(() => {
+					timeout = null;
+					if (window.innerWidth > MAX_MOBILE_RES && dialog?.open) {
+						dialog?.close();
+					}
+				}, 100);
+			}
+		}, false);
+	})
+</script>
+
+<script>
+	window.addEventListener('load', () => {
+		const ESCAPE_KEY = 'Escape';
+		const dialog = document.querySelector('.sidebar-wrapper');
+		window.addEventListener('keydown', (event) => {
+			if (event.key === ESCAPE_KEY && dialog?.open) {
+				dialog?.close();
+			}
+		})
+	})
+</script>

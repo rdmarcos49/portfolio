@@ -96,12 +96,28 @@
       }
 
       &__link {
+        align-items: center;
         color: $secondary-color;
+        display: flex;
         text-decoration-color: transparent;
         text-underline-offset: 5px;
       
         &:hover {
           text-decoration-color: inherit;
+        }
+
+        &--external {
+          &::after {
+            content: '';
+            background-image: url('/icons/external.svg');
+            background-repeat: no-repeat;
+            background-size: 16px 16px;
+            display: block;
+            height: 16px;
+            margin-left: 8px;
+            margin-right: 16px;
+            width: 16px;
+          }
         }
       }
     }

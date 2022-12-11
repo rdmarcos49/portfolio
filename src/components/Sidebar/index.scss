@@ -20,15 +20,17 @@
   top: 0;
   width: 100%;
 
-  @media screen and (min-width: $screen-xxs) {
+  @media screen and (min-width: $screen-xs) {
+    max-width: 250px;
     top: 56px;
-    width: 200px;
+    width: 100%;
   }
 
   &__option {
     align-items: center;
     color: inherit;
     display: flex;
+    outline: none;
     padding: 16px;
     text-decoration: none;
     transition: all 100ms ease;
@@ -44,7 +46,7 @@
     &--external {
       &::after {
         content: '';
-        background-image: url('icons/external.svg');
+        background-image: url('/icons/external.svg');
         background-repeat: no-repeat;
         background-size: 16px 16px;
         display: block;
