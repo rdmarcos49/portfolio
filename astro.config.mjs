@@ -4,7 +4,7 @@ import robotsTxt from "astro-robots-txt";
 
 export default defineConfig({
   integrations: [
-    compress(),
+    compress({ css: false }),
     robotsTxt(),
   ]
 });
