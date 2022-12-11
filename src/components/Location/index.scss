@@ -3,6 +3,12 @@
   display: flex;
   gap: 4px;
   justify-content: center;
+  text-decoration: none;
+  text-underline-offset: 4px;
+
+  &:hover {
+    text-decoration: underline;
+  }
 
   &__image {
     width: 30px;
