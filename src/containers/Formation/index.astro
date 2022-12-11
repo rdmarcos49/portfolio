@@ -29,15 +29,47 @@ import { workExperience, education } from '../../utils/formations';
 </section>
 
 <script>
-  const accordions = [...document.querySelectorAll('.accordion')];
-  for (const accordion of accordions) {
-    const chevron = accordion.querySelector('img');
-    accordion?.addEventListener('click', () => {
-      const currentAriaExpandedValue = accordion.getAttribute('aria-expanded')
-      const newAriaExpandedValue = currentAriaExpandedValue === 'false' ? 'true' : 'false';
+  function collapseSection(element) {
+    const sectionHeight = element.scrollHeight;
+    
+    const elementTransition = element.style.transition;
+    element.style.transition = '';
+    
+    requestAnimationFrame(() => {
+      element.style.height = sectionHeight + 'px';
+      element.style.transition = elementTransition;
+      
+      requestAnimationFrame(() => {
+        element.style.height = 0 + 'px';
+      });
+    });
+    
+    element.setAttribute('aria-expanded', 'false');
+  }
 
-      accordion.setAttribute('aria-expanded', newAriaExpandedValue);
-      chevron?.setAttribute('aria-expanded', newAriaExpandedValue);
-    })
+  function expandSection(element) {
+    const sectionHeight = element.scrollHeight;
+    element.style.height = sectionHeight + 'px';
+    element.setAttribute('aria-expanded', 'true');
+  }
+
+  const accordionList = [...document.querySelectorAll('.accordion')];
+
+  for (const accordion of accordionList) {
+    accordion.addEventListener('click', () => {
+      const section = accordion.querySelector('.accordion__items-wrapper');
+      const chevron = accordion.querySelector('.accordion__overview__chevron')
+      const isExpanded = accordion.getAttribute('aria-expanded') === 'true';
+        
+      if (isExpanded) {
+        collapseSection(section)
+        accordion.setAttribute('aria-expanded', 'false')
+        chevron.setAttribute('aria-expanded', 'false')
+      } else {
+        expandSection(section)
+        accordion.setAttribute('aria-expanded', 'true')
+        chevron.setAttribute('aria-expanded', 'true')
+      }
+    });
   }
 </script>

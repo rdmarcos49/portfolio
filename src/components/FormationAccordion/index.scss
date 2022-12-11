@@ -35,15 +35,6 @@
   &[aria-expanded='false'] &__items-wrapper__item {
     pointer-events: none;
   }
-  
-  &[aria-expanded='true'] &__items-wrapper {
-    max-height: 1000vh;
-    opacity: 1;
-  }
-
-  &[aria-expanded='true'] &__items-wrapper__divisor {
-    padding: 16px 0;
-  }
 
   &__overview {
     align-items: center;
@@ -72,6 +63,7 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
+      height: 0;
 
       &__title {
         font-size: 1rem;
@@ -113,21 +105,17 @@
   }
 
   &__items-wrapper {
-    max-height: 0;
-    opacity: 0;
+    height: 0;
+    overflow: hidden;
     text-align: left;
-    transition:
-      max-height 400ms ease,
-      opacity 300ms ease 100ms
-    ;
-    width: 100%;
+    transition: height 0.3s ease-out;
 
     &__divisor {
       align-items: center;
       background-color: transparent;
       display: flex;
       height: 1px;
-      padding: 0;
+      padding: 16px 0;
       transition: all 400ms ease;
       width: 100%;
 

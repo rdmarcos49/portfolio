@@ -16,7 +16,7 @@ const ComputerIcon = 'icons/computer-check.png';
     </div>
     <img class='accordion__overview__chevron' src={ChevronIcon} alt='toggle-control' aria-expanded='false'/>
   </div>
-  <div class='accordion__items-wrapper'>
+  <div class='accordion__items-wrapper' aria-expanded='false'>
     {items.map((item: Description) => (
       <div class="accordion__items-wrapper__divisor"></div>
       <div class='accordion__items-wrapper__item'>
