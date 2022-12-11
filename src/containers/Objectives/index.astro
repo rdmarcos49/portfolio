@@ -10,7 +10,7 @@ import { listOfObjectives } from '../../utils/objectives'
       <div class='objectives__content__group'>
         {list.map(objective => (
           <article class='objectives__content__group__row'>
-            <img class='objectives__content__group__row__thumbnail' alt='objective-icon' src={objective.thumbnail} />
+            <img class='objectives__content__group__row__thumbnail' alt='objective-icon' src={objective.thumbnail} height={38} width={38} />
             <p class='objectives__content__group__row__description general-description'> {objective.description} </p>
           </article>
         ))}

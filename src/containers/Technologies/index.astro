@@ -14,7 +14,7 @@ import { listOfTechnologies } from '../../utils/technologies';
       <div class='technologies__group__rows-wrapper'>
         {technology.items.map(item => (
           <div class='technologies__group__rows-wrapper__row'>
-            <img class='technologies__group__rows-wrapper__row__thumbnail' alt='technology-icon' src={item.thumbnail} />
+            <img class='technologies__group__rows-wrapper__row__thumbnail' alt='technology-icon' src={item.thumbnail} height={38} width={38} />
             <p class='technologies__group__rows-wrapper__row__description general-description'> {item.description} </p>
           </div>
         ))}
