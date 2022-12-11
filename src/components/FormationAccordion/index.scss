@@ -107,7 +107,7 @@
     height: 0;
     overflow: hidden;
     text-align: left;
-    transition: height 0.3s ease-out;
+    transition: height 200ms linear;
 
     &__divisor {
       align-items: center;
