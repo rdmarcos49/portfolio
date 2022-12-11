@@ -57,13 +57,8 @@
         color: inherit;
       }
 
-      @media screen and (min-width: $screen-xxs) {
-        transform: translateX(-20px);
-      }
-
       @media screen and (min-width: $screen-lg) {
         flex-grow: unset;
-        transform: unset;
       }
 
       &--link {
@@ -76,6 +71,10 @@
 
       &--plain-text {
         display: block;
+
+        @media screen and (min-width: $screen-xxs) {
+          transform: translateX(-20px);
+        }
 
         &:hover {
           text-decoration: none;
