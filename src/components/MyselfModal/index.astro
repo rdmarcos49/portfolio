@@ -4,19 +4,32 @@ import './index.scss';
 
 <dialog class='myself-wrapper'>
   <section class='myself-wrapper__modal'>
+    <img class='myself-wrapper__modal__cross' title='Close' alt='cross-close' src='/icons/cross.png' />
     <h3 class='myself-wrapper__modal__title'> About myself 👾💻☕ </h3>
     <p class='myself-wrapper__modal__text'>
-      I has been introduced in the IT world when I started to study in 2015. I come from a bachelor of humanities, so it was a very steep ride. 
+      I has been introduced in the IT world when I started to study in 2015. I came from a bachelor of humanities, so it was a very steep ride. 
     </p>
     <p class='myself-wrapper__modal__text'>
       My friends and career colleges help's me a lot with my studies so today I'm working as frontend software engineer thanks to them!
     </p>
     <p class='myself-wrapper__modal__text'>
-      Aside my job, I like play videogames (especially the RTS and fighting games), drink coffee, watch series / anime / movies, workout on the gym when I can, and spending time with my girlfriend.
+      Aside my job, I like play videogames (especially the RTS and fighting games), drink coffee, watch series / anime / movies, workout on the gym, and spending time with my girlfriend.
     </p>
   </section>
 </dialog>
 
 <script>
-  
+  const dialog = document.querySelector('.myself-wrapper');
+  const cross = document.querySelector('.myself-wrapper__modal__cross');
+  const DIALOG_NODENAME = 'DIALOG'
+
+  dialog?.addEventListener('click', (event) => {
+    if (event?.target?.nodeName === DIALOG_NODENAME) {
+      dialog.close()
+    }
+  })
+
+  cross?.addEventListener('click', () => {
+    dialog.close()
+  })
 </script>

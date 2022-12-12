@@ -22,8 +22,12 @@ import './index.scss';
 </header>
 
 <script>
-  const dialog = document.querySelector('.sidebar-wrapper');
+  const modalDialog = document.querySelector('.myself-wrapper');
+  const sidebarDialog = document.querySelector('.sidebar-wrapper');
+
+  const myselfButton = document.querySelector('.welcome__button-myself');
   const hamburgerIcon = document.querySelector('.header__wrapper__hamburger');
 
-  hamburgerIcon?.addEventListener('click', () => dialog?.show())
+  myselfButton?.addEventListener('click', () => modalDialog?.show())
+  hamburgerIcon?.addEventListener('click', () => sidebarDialog?.show())
 </script>

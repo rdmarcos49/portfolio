@@ -46,18 +46,18 @@
     }
 
     &--mobile {
-      display: block;
-
+      display: flex;
+  
       @media screen and (min-width: $screen-lg) {
         display: none;
       }
     }
-
+  
     &--desktop {
       display: none;
-
+  
       @media screen and (min-width: $screen-lg) {
-        display: block;
+        display: flex;
       }
     }
   }
@@ -76,6 +76,20 @@
     font-weight: 300;
     line-height: 20px;
     text-underline-offset: 4px;
+    margin-bottom: 16px;
+  }
+
+  &__button-myself {
+    background-color: #FFFFFF33;
+    border: 1px solid #000;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: auto;
+    padding: 8px;
+
+    &:focus::after {
+      box-shadow: 0 0 0 2px rgba(0, 0, 0, 1);
+    }
   }
 }
 
@@ -112,6 +126,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   gap: 16px;
   text-align: center;
   padding-bottom: 16px;

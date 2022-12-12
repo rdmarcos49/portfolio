@@ -41,10 +41,15 @@ import '../global/fonts.scss';
 <script>
 	window.addEventListener('load', () => {
 		const ESCAPE_KEY = 'Escape';
-		const dialog = document.querySelector('.sidebar-wrapper');
+		const modalDialog = document.querySelector('.myself-wrapper');
+		const sidebarDialog = document.querySelector('.sidebar-wrapper');
 		window.addEventListener('keydown', (event) => {
-			if (event.key === ESCAPE_KEY && dialog?.open) {
-				dialog?.close();
+			if (event.key === ESCAPE_KEY && sidebarDialog?.open) {
+				sidebarDialog?.close();
+			}
+
+			if (event.key === ESCAPE_KEY && modalDialog?.open) {
+				modalDialog?.close();
 			}
 		})
 	})
