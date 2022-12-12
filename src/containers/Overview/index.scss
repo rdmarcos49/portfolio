@@ -75,6 +75,7 @@
   &__regular-cv-text {
     font-weight: 300;
     line-height: 20px;
+    text-underline-offset: 4px;
   }
 }
 
@@ -113,4 +114,5 @@
   flex-direction: column;
   gap: 16px;
   text-align: center;
+  padding-bottom: 16px;
 }
