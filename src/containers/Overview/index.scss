@@ -1,14 +1,12 @@
 @import '../../global/constants.styles.scss';
 
-.overview {
+.welcome {
   align-items: center;
   background-color: #FFF;
   display: flex;
-  gap: 16px;
   flex-direction: column;
+  gap: 16px;
   min-height: min(880px, calc(100vh - 60px));
-  text-align: center;
-  transition: 0.2s;
   width: 100%;
 
   @media screen and (min-width: $screen-xs) {
@@ -22,10 +20,18 @@
 
   &__title {
     font-size: 1.875rem;
+
+    @media screen and (min-width: $screen-lg) {
+      font-size: 2.25rem;
+    }
   }
 
   &__subtitle {
     font-size: 1.5rem;
+
+    @media screen and (min-width: $screen-lg) {
+      font-size: 1.875rem;
+    }
   }
 
   &__avatar {
@@ -38,6 +44,22 @@
     &:focus {
       outline: auto;
     }
+
+    &--mobile {
+      display: block;
+
+      @media screen and (min-width: $screen-lg) {
+        display: none;
+      }
+    }
+
+    &--desktop {
+      display: none;
+
+      @media screen and (min-width: $screen-lg) {
+        display: block;
+      }
+    }
   }
 
   &__description {
@@ -47,13 +69,48 @@
 
     @media screen and (min-width: $screen-xs) {
       font-size: 1.125rem;
-      margin-top: 3%;
     }
   }
 
   &__regular-cv-text {
     font-weight: 300;
     line-height: 20px;
-    margin-top: 16px;
   }
+}
+
+
+.presentation-wrapper {
+  align-items: center;
+  background-color: #FFF;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  text-align: center;
+  transition: 0.2s;
+  width: 100%;
+
+  @media screen and (min-width: $screen-lg) {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 48px 0;
+  }
+
+  &__text {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @media screen and (min-width: $screen-lg) {
+      gap: 20px;
+    }
+  }
+}
+
+.description-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
 }
