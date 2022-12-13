@@ -21,7 +21,7 @@ export const listOfObjectives: ObjectiveItem[][] = [
     },
     {
       thumbnail: '/icons/vscode.png',
-      description: 'Right now I’m working as frontend software engineer, but I really want to expand my knowledge, in order to apply it over professional projects.',
+      description: 'Right now I’m working only in the frontend, but I would glad to collaborate in other areas, in professional environments.',
     },
   ]
 ]
