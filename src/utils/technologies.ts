@@ -16,7 +16,7 @@ export const listOfTechnologies: Technology[] = [
     items: [
       {
         thumbnail: '/icons/code.png',
-        description: 'I working with Javascript, Typescript, React, Redux, React router, NextJS,'
+        description: 'I working with Javascript, React, Redux, React router, NextJS,'
       },
       {
         thumbnail: '/icons/chemistry.png',
@@ -24,7 +24,7 @@ export const listOfTechnologies: Technology[] = [
       },
       {
         thumbnail: '/icons/paint-brown.png',
-        description: 'SCSS and LESS.'
+        description: 'Styled components and Material UI.'
       },
     ]
   },
@@ -34,11 +34,11 @@ export const listOfTechnologies: Technology[] = [
     items: [
       {
         thumbnail: '/icons/modules.png',
-        description: 'to use technologies as Storybook, Webpack, Atomic design, JQuery,'
+        description: 'to use technologies as Typescript, Storybook, Webpack, Atomic design, JQuery,'
       },
       {
         thumbnail: '/icons/paint-blue.png',
-        description: 'Styled components and Material UI.'
+        description: 'SCSS and LESS.'
       },
     ]
   },

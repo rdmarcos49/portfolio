@@ -15,8 +15,20 @@ export const workExperience: Formation[] = [
     date: 'September 2021 - Present',
     items: [
       {
-        date: 'June 2022 - Present',
-        description: `I'm participating, as a core member of the team, in the redesign of a web
+        date: 'October 2022 - Present',
+        description: `I joined to an already formed team, in order to support them and finish
+        pendent features that they have in their backlog. My principal tasks are refactor the old UI
+        into a new one, replace all the mocked data with information that come from differents
+        microservices, establish the data flow through the application and how this interacts with
+        the backend, between others.
+        We are working on two apps: the first one is a frontend widget for a mobile application,
+        where the users can log in and check their financial statistics. The second app it's a
+        admin panel, with differents configurations related with the widgets (texts, colors, order of
+        components, etc).`,
+      },
+      {
+        date: 'June 2022 - October 2022',
+        description: `I participated, as a core member of the team, in the redesign of a web
           page for a finance-related application. This app has different sections.
           It's main characteristic is a complete flow that consists of validating the
           user's identity to allow them to acquire the services offered by the
@@ -27,7 +39,7 @@ export const workExperience: Formation[] = [
         date: 'September 2021 - June 2022',
         description: `We built an entire onboarding app from a scratch, with a backoffice
           application to manage the users registered. I also participated in the
-          development of a landing page, where the users can buy BTC. `,
+          development of an application where the users, already registered using the onboarding, can buy BTC.`,
         },
     ]
   },
@@ -59,7 +71,7 @@ export const workExperience: Formation[] = [
     items: [
       {
         description: `Development professional practices for the university through a Front End bootcamp. This were my first steps in the professional environment.
-          The final project was a SPA (single page application) using the Spotify API`,
+          The final project was a SPA using the Spotify API, Redux and the browser storage.`,
       },
     ]
   },
@@ -71,7 +83,7 @@ export const education: Formation[] = [
     date: 'March 2015 - Present',
     items: [
       {
-        description: 'Final Project in progress',
+        description: 'Final Project in progress.',
       },
     ]
   },
@@ -80,7 +92,7 @@ export const education: Formation[] = [
     date: 'March 2015 - December 2019',
     items: [
       {
-        description: 'Intermediate degree from Systems Engineer career. Finished',
+        description: 'Intermediate degree from Systems Engineer career. Finished.',
       },
     ]
   },
