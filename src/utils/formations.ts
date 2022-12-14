@@ -15,7 +15,7 @@ export const workExperience: Formation[] = [
     date: 'September 2021 - Present',
     items: [
       {
-        date: 'October 2022 - Present',
+        date: 'November 2022 - Present',
         description: `I joined to an already formed team, in order to support them and finish
         pendent features that they have in their backlog. My principal tasks are refactor the old UI
         into a new one, replace all the mocked data with information that come from differents
@@ -27,7 +27,7 @@ export const workExperience: Formation[] = [
         components, etc).`,
       },
       {
-        date: 'June 2022 - October 2022',
+        date: 'June 2022 - November 2022',
         description: `I participated, as a core member of the team, in the redesign of a web
           page for a finance-related application. This app has different sections.
           It's main characteristic is a complete flow that consists of validating the
