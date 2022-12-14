@@ -34,6 +34,10 @@
 
     &__title {
       font-size: 1rem;
+      
+      @media screen and (min-screen: $screen-lg) {
+        font-size: 1.1rem;
+      }
 
       &--light {
         font-weight: 400;
