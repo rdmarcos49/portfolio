@@ -17,7 +17,7 @@ export const workExperience: Formation[] = [
       {
         date: 'November 2022 - Present',
         description: `I joined to an already formed team, in order to support them and finish
-        pendent features that they have in their backlog. My principal tasks are refactor the old UI
+        pending features that they have in their backlog. My principal tasks are refactor the old UI
         into a new one, replace all the mocked data with information that come from differents
         microservices, establish the data flow through the application and how this interacts with
         the backend, between others.
