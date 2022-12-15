@@ -29,30 +29,6 @@ import { workExperience, education } from '../../utils/formations';
 </section>
 
 <script>
-  function collapseSection(element) {
-    const sectionHeight = element.scrollHeight;
-    
-    const elementTransition = element.style.transition;
-    element.style.transition = '';
-    
-    requestAnimationFrame(() => {
-      element.style.height = sectionHeight + 'px';
-      element.style.transition = elementTransition;
-      
-      requestAnimationFrame(() => {
-        element.style.height = 0 + 'px';
-      });
-    });
-    
-    element.setAttribute('data-expanded', 'false');
-  }
-
-  function expandSection(element) {
-    const sectionHeight = element.scrollHeight;
-    element.style.height = sectionHeight + 'px';
-    element.setAttribute('data-expanded', 'true');
-  }
-
   const accordionList = [...document.querySelectorAll('.accordion')];
 
   for (const accordion of accordionList) {
@@ -62,14 +38,14 @@ import { workExperience, education } from '../../utils/formations';
       const isExpanded = accordion.getAttribute('data-expanded') === 'true';
         
       if (isExpanded) {
-        collapseSection(section)
+        section.setAttribute('data-expanded', 'false')
         accordion.setAttribute('data-expanded', 'false')
         chevron.setAttribute('data-expanded', 'false')
       } else {
-        expandSection(section)
+        section.setAttribute('data-expanded', 'true')
         accordion.setAttribute('data-expanded', 'true')
         chevron.setAttribute('data-expanded', 'true')
       }
-    });
+    })
   }
 </script>

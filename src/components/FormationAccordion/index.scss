@@ -104,10 +104,15 @@
   }
 
   &__items-wrapper {
-    height: 0;
+    max-height: 0;
     overflow: hidden;
     text-align: left;
-    transition: height 200ms linear;
+    transition: max-height 500ms cubic-bezier(0, 1, 0, 1);
+
+    &[data-expanded='true'] {
+      max-height: 1000vh;
+      transition: max-height 2s ease-in-out;
+    }
 
     &__divisor {
       align-items: center;
