@@ -11,7 +11,7 @@ interface Formation {
 
 export const workExperience: Formation[] = [
   {
-    title: 'Software Engineer @ GlobalTask',
+    title: 'Software Developer @ GlobalTask',
     date: 'September 2021 - Present',
     items: [
       {
