@@ -7,7 +7,7 @@ const CalendarIcon = '/icons/calendar.png';
 const ComputerIcon = 'icons/computer-check.png';
 ---
 
-<button class='accordion' data-expanded='false' tabindex='0'>
+<li class='accordion' data-expanded='false' tabindex='0'>
   <div class='accordion__overview'>
     <div class='accordion__overview__text-wrapper'>
       <p class='accordion__overview__text-wrapper__title'> {title} </p>
@@ -16,10 +16,9 @@ const ComputerIcon = 'icons/computer-check.png';
     </div>
     <img class='accordion__overview__chevron' src={ChevronIcon} alt='toggle-control' data-expanded='false' height={36} width={36} />
   </div>
-  <div class='accordion__items-wrapper' data-expanded='false'>
+  <ul class='accordion__items-wrapper' data-expanded='false'>
     {items.map((item: Description) => (
-      <div class="accordion__items-wrapper__divisor"></div>
-      <div class='accordion__items-wrapper__item'>
+      <li class='accordion__items-wrapper__item'>
         {item.date && (
           <div class='accordion__items-wrapper__item__container'>
             <img class='accordion__items-wrapper__item__container__icon' src={CalendarIcon} alt='calendar-icon' />
@@ -30,7 +29,7 @@ const ComputerIcon = 'icons/computer-check.png';
           <img class='accordion__items-wrapper__item__container__icon' src={ComputerIcon} alt='computer-icon' />
           <p class='accordion__items-wrapper__item__container__description'>{item.description}</p>
         </div>
-      </div>
+      </li>
     ))}
-  </div>
-</button>
+  </ul>
+</li>

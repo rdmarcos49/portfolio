@@ -7,24 +7,28 @@ import { workExperience, education } from '../../utils/formations';
 <section class='formation bg-gray'>
   <div class='formation__group'>
     <h3 id="experience" class='formation__group__title general-title scrollable-section'> Work experience </h3>
-    {workExperience.map(experience => (
-      <FormationAccordion
-        title={experience.title}
-        date={experience.date}
-        items={experience.items}
-      />
-    ))}
+    <ul class='formation__group__experience-wrapper'>
+      {workExperience.map(experience => (
+        <FormationAccordion
+          title={experience.title}
+          date={experience.date}
+          items={experience.items}
+        />
+      ))}
+    </ul>
   </div>
 
   <div class='formation__group'>
     <h3 id="education" class='formation__group__title general-title scrollable-section'> Education </h3>
-    {education.map(experience => (
-      <FormationAccordion
-        title={experience.title}
-        date={experience.date}
-        items={experience.items}
-      />
-    ))}
+    <ul class='formation__group__experience-wrapper'>
+      {education.map(experience => (
+        <FormationAccordion
+          title={experience.title}
+          date={experience.date}
+          items={experience.items}
+        />
+      ))}
+    </ul>
   </div>
 </section>
 
