@@ -1,0 +1,21 @@
+---
+import './index.scss'
+import { listOfGoals } from '../../utils/goals'
+---
+
+<section class='goals bg-gray'>
+  <h3 id="goals" class='goals__title general-title scrollable-section'> Goals </h3>
+  <div class='goals__content'>
+    {listOfGoals.map(list => (
+      <div class='goals__content__group'>
+        {list.map(goals => (
+          <article class='goals__content__group__row'>
+            <img class='goals__content__group__row__thumbnail' alt='goal-icon' src={goals.thumbnail} height={38} width={38} />
+            <p class='goals__content__group__row__description general-description'> {goals.description} </p>
+          </article>
+        ))}
+      </div>
+    ))}
+  </div>
+</section>
+

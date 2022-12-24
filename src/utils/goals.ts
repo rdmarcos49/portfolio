@@ -1,9 +1,9 @@
-interface ObjectiveItem {
+interface GoalItem {
   thumbnail: string;
   description: string;
 }
 
-export const listOfObjectives: ObjectiveItem[][] = [
+export const listOfGoals: GoalItem[][] = [
   [
     {
       thumbnail: '/icons/statistics.png',
