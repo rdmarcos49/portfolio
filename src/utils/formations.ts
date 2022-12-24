@@ -37,9 +37,9 @@ export const workExperience: Formation[] = [
       },
       {
         date: 'September 2021 - June 2022',
-        description: `We built an entire onboarding app from a scratch, with a backoffice
-          application to manage the users registered. I also participated in the
-          development of an application where the users, already registered using the onboarding, can buy BTC.`,
+        description: `We created a series of applications related to each other:
+          one of them oriented to the purchase of btc, an onboarding for user creation
+          and a backoffice / dashboard for managing them.`,
         },
     ]
   },
