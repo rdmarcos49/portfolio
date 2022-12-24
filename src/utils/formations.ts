@@ -79,7 +79,7 @@ export const workExperience: Formation[] = [
 
 export const education: Formation[] = [
   {
-    title: 'Systems Engineer @ UNICEN',
+    title: 'Software Engineer @ UNICEN',
     date: 'March 2015 - Present',
     items: [
       {
@@ -88,11 +88,11 @@ export const education: Formation[] = [
     ]
   },
   {
-    title: 'Systems Analyst @ UNICEN',
+    title: 'Software Analyst @ UNICEN',
     date: 'March 2015 - December 2019',
     items: [
       {
-        description: 'Intermediate degree from Systems Engineer career. Finished.',
+        description: 'Intermediate degree from Software Engineer career. Finished.',
       },
     ]
   },
