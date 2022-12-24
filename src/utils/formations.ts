@@ -20,7 +20,7 @@ export const workExperience: Formation[] = [
         pending features that they have in their backlog. My principal tasks are refactor the old UI
         into a new one, replace all the mocked data with information that come from differents
         microservices, establish the data flow through the application and how this interacts with
-        the backend, between others.
+        the backend.
         We are working on two apps: the first one is a frontend widget for a mobile application,
         where the users can log in and check their financial statistics. The second app it's a
         admin panel, with differents configurations related with the widgets (texts, colors, order of
