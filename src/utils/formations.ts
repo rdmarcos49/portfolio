@@ -16,30 +16,22 @@ export const workExperience: Formation[] = [
     items: [
       {
         date: 'November 2022 - Present',
-        description: `I joined to an already formed team, in order to support them and finish
-        pending features that they have in their backlog. My principal tasks are refactor the old UI
-        into a new one, replace all the mocked data with information that come from differents
-        microservices, establish the data flow through the application and how this interacts with
-        the backend.
-        We are working on two apps: the first one is a frontend widget for a mobile application,
-        where the users can log in and check their financial statistics. The second app it's a
-        admin panel, with differents configurations related with the widgets (texts, colors, order of
-        components, etc).`,
+        description: `Currently, I'm working on a fintech project developing an application
+          to get the "financial score" for users. I'm also contributing to a dashboard app,
+          which is part of the entire project.`,
       },
       {
         date: 'June 2022 - November 2022',
-        description: `I participated, as a core member of the team, in the redesign of a web
-          page for a finance-related application. This app has different sections.
-          It's main characteristic is a complete flow that consists of validating the
-          user's identity to allow them to acquire the services offered by the
-          company. We also developed a fully customizable blog, user profile, and
-          many landing pages.`,
+        description: `I participated, as a core member of the team, in the redesign of
+          an entire website related to the fintech area. This application has, as its principal
+          objective, to generate credit reports for the final user. My main tasks, besides the
+          mentioded objetive, were related to proposing and developing improvements for UI/UX and SEO.`,
       },
       {
         date: 'September 2021 - June 2022',
-        description: `We created a series of applications related to each other:
-          one of them oriented to the purchase of btc, an onboarding for user creation
-          and a backoffice / dashboard for managing them.`,
+        description: `We created from a scratch a series of applications related to each other:
+          one of them oriented to the purchase of BTC, an onboarding for user creation,
+          and a back-office / dashboard for managing them.`,
         },
     ]
   },
