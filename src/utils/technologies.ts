@@ -29,8 +29,8 @@ export const listOfTechnologies: Technology[] = [
     ]
   },
   {
-    titleLight: 'I had the chance, ',
-    titleBold: 'in some projects that I worked...',
+    titleLight: '',
+    titleBold: 'I had the chance...',
     items: [
       {
         thumbnail: '/icons/modules.png',
