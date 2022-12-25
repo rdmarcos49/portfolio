@@ -13,5 +13,12 @@
       text-align: center;
       word-break: break-word;
     }
+
+    &__experience-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding: 0;
+    }
   }
 }

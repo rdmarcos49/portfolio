@@ -7,45 +7,63 @@ import { workExperience, education } from '../../utils/formations';
 <section class='formation bg-gray'>
   <div class='formation__group'>
     <h3 id="experience" class='formation__group__title general-title scrollable-section'> Work experience </h3>
-    {workExperience.map(experience => (
-      <FormationAccordion
-        title={experience.title}
-        date={experience.date}
-        items={experience.items}
-      />
-    ))}
+    <ul class='formation__group__experience-wrapper'>
+      {workExperience.map(experience => (
+        <FormationAccordion
+          title={experience.title}
+          date={experience.date}
+          items={experience.items}
+        />
+      ))}
+    </ul>
   </div>
 
   <div class='formation__group'>
     <h3 id="education" class='formation__group__title general-title scrollable-section'> Education </h3>
-    {education.map(experience => (
-      <FormationAccordion
-        title={experience.title}
-        date={experience.date}
-        items={experience.items}
-      />
-    ))}
+    <ul class='formation__group__experience-wrapper'>
+      {education.map(experience => (
+        <FormationAccordion
+          title={experience.title}
+          date={experience.date}
+          items={experience.items}
+        />
+      ))}
+    </ul>
   </div>
 </section>
 
 <script>
   const accordionList = [...document.querySelectorAll('.accordion')];
 
+  const delta = 8
+  let startX: number
+  let startY: number
+
   for (const accordion of accordionList) {
-    accordion.addEventListener('click', () => {
-      const section = accordion.querySelector('.accordion__items-wrapper');
-      const chevron = accordion.querySelector('.accordion__overview__chevron')
-      const isExpanded = accordion.getAttribute('data-expanded') === 'true';
-        
-      if (isExpanded) {
-        section.setAttribute('data-expanded', 'false')
-        accordion.setAttribute('data-expanded', 'false')
-        chevron.setAttribute('data-expanded', 'false')
-      } else {
-        section.setAttribute('data-expanded', 'true')
-        accordion.setAttribute('data-expanded', 'true')
-        chevron.setAttribute('data-expanded', 'true')
+    accordion.addEventListener('mousedown', function (event) {
+      startX = event.pageX;
+      startY = event.pageY;
+    });
+
+    accordion.addEventListener('mouseup', function (event) {
+      const diffX = Math.abs(event.pageX - startX)
+      const diffY = Math.abs(event.pageY - startY)
+
+      if (diffX < delta && diffY < delta) {
+        const section = accordion.querySelector('.accordion__items-wrapper');
+        const chevron = accordion.querySelector('.accordion__overview__chevron')
+        const isExpanded = accordion.getAttribute('data-expanded') === 'true';
+          
+        if (isExpanded) {
+          section.setAttribute('data-expanded', 'false')
+          accordion.setAttribute('data-expanded', 'false')
+          chevron.setAttribute('data-expanded', 'false')
+        } else {
+          section.setAttribute('data-expanded', 'true')
+          accordion.setAttribute('data-expanded', 'true')
+          chevron.setAttribute('data-expanded', 'true')
+        }
       }
-    })
+    });
   }
 </script>
