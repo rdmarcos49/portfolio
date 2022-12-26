@@ -23,13 +23,13 @@ export const workExperience: Formation[] = [
       {
         date: 'June 2022 - November 2022',
         description: `I participated, as a core member of the team, in the redesign of
-          an entire website related to the fintech area. This application has, as its principal
-          objective, to generate credit reports for the final user. My main tasks, besides the
+          an entire website related to the fintech area. This application's main objective
+          is to generate credit reports for the final user. My main tasks, besides the
           mentioded objetive, were related to proposing and developing improvements for UI/UX and SEO.`,
       },
       {
         date: 'September 2021 - June 2022',
-        description: `We created from a scratch a series of applications related to each other:
+        description: `We created from scratch a series of applications related to each other:
           one of them oriented to the purchase of BTC, an onboarding for user creation,
           and a back-office / dashboard for managing them.`,
         },
@@ -42,13 +42,13 @@ export const workExperience: Formation[] = [
       {
         date: 'February 2021 - September 2021',
         description: `I joined the development and maintenance of a digital educative
-          platform. My task were develop features, testing, code improvement and
+          platform. My tasks were developing features, testing, code improvement and
           maintenance.`,
       },
       {
         date: 'August 2020 - February 2021',
-        description: `E-Commerce development, maintenance and migration from plain
-          Javascript application to a React application.`,
+        description: `E-Commerce development, maintenance and migration from a 
+          plain Javascript application to a React application.`,
       },
       {
         date: 'February 2020 - August 2020',
@@ -62,8 +62,9 @@ export const workExperience: Formation[] = [
     date: 'November 2019 - January 2020',
     items: [
       {
-        description: `Development professional practices for the university through a Front End bootcamp. This were my first steps in the professional environment.
-          The final project was a SPA using the Spotify API, Redux and the browser storage.`,
+        description: `Professional practices in software development for the university,
+          through a Front End Bootcamp. These were my first steps in a professional environment.
+          The final project was a SPA using the Spotify API, Redux, and browser storage.`,
       },
     ]
   },

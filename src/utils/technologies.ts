@@ -16,7 +16,7 @@ export const listOfTechnologies: Technology[] = [
     items: [
       {
         thumbnail: '/icons/code.png',
-        description: 'I working with Javascript, React, Redux, React router, NextJS,'
+        description: 'I work with Javascript, React, Redux, React router, NextJS,'
       },
       {
         thumbnail: '/icons/chemistry.png',
