@@ -18,7 +18,7 @@ export const workExperience: Formation[] = [
         date: 'November 2022 - Present',
         description: `Currently, I'm working on a fintech project developing an application
           to get the "financial score" for users. I'm also contributing to a dashboard app,
-          which is part of the entire project.`,
+          which is part of the project.`,
       },
       {
         date: 'June 2022 - November 2022',

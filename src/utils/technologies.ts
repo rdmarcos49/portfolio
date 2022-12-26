@@ -52,7 +52,7 @@ export const listOfTechnologies: Technology[] = [
       },
       {
         thumbnail: '/icons/server.png',
-        description: 'Some of this technologies are Python, NodeJS, Express,'
+        description: 'Some of this technologies are NodeJS, Express,'
       },
       {
         thumbnail: '/icons/webpage.png',
@@ -60,7 +60,7 @@ export const listOfTechnologies: Technology[] = [
       },
       {
         thumbnail: '/icons/database.png',
-        description: 'MongoDB, Mongoose, Amazon S3.'
+        description: 'MongoDB, Amazon S3.'
       },
     ]
   }
